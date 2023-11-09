@@ -5,7 +5,6 @@ function showEmail(){
     const checked = Array.from(emailList)
         .filter(elem => elem.checked)
         .map(elem => elem.name);
-    console.log(checked.join('; '))
     checkedList.value = checked.join('; ');
 }
 
