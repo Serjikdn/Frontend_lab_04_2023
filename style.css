@@ -1,3 +1,19 @@
+body {
+    margin: 0 auto;
+    width: 920px;
+    background-color: black;
+    color: #549f0c;
+}
+section{
+    border: 1px solid #898888;
+    margin: 5px;
+    padding: 10px;
+}
+
+.language p {
+    margin: 3px;
+}
+
 #checkedList {
-    width: 350px;
+    width: 450px;
 }

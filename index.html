@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Lab 4</h1>
-<div>
+<section>
     <h2>Task 1</h2>
     <div class="language">
         <input type="checkbox" name="language" id="ua">
@@ -19,8 +19,8 @@
         <p id="selectedLanguage"></p>
         <button onclick="showLanguage()">OK</button>
     </div>
-</div>
-<div>
+</section>
+<section>
     <h2>Task 2</h2>
     <div class="email">
         <input type="checkbox" name="post@gmail.com" id="one">
@@ -41,9 +41,30 @@
         <label for="eight">refund@gmail.com</label><br>
     </div>
     <input type="text" id="checkedList">
-</div>
+</section>
+<section>
+    <h2>Task 3</h2>
+    <div class="test">
+        <p>Choose the correct answer</p>
+        <p id="state">State</p>
+        <span></span>
+        <button id="next">next task</button>
+        <br>
+        <p id="example">example</p>
+        <input type="radio" name="answer" id="answer1">
+        <label for="answer1">1</label><br>
+        <input type="radio" name="answer" id="answer2">
+        <label for="answer2">2</label><br>
+        <input type="radio" name="answer" id="answer3">
+        <label for="answer3">3</label><br>
+        <input type="radio" name="answer" id="answer4">
+        <label for="answer4">4</label>
+        <p id="wrong"></p>
+    </div>
+</section>
 
 <script src="task_1.js"></script>
 <script src="task_2.js"></script>
+<script src="task_3.js"></script>
 </body>
 </html>
