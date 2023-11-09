@@ -1,17 +1,17 @@
 const progress = document.querySelector('#progress');
 const nextButton = document.querySelector('#nextTask');
 const check = document.querySelector('#check');
-const example = document.querySelector('#task');
+const oneExample = document.querySelector('#task');
 const answer = document.querySelector('.test_2 input');
-const wrong = document.querySelector('#info');
+const info = document.querySelector('#info');
 const numTask = document.querySelector('#numTask');
 
 const tasks = [];
 const result = [];
-let count = 0;
+let taskNumber = 0;
 
 // створює массив прикладів
-function creatTask(number) {
+function creatTasks(number) {
     for (let i = 0; i < number; i++) {
         const operandA = Math.floor(Math.random() * 10) + 1;
         const operandB = Math.floor(Math.random() * 10) + 1;
@@ -20,67 +20,68 @@ function creatTask(number) {
 }
 
 // перевіряє обрану відповідь
-function checkAnswer(task, resultList, taskNumber, equal) {
+function checkAnswerTask(task, resultList, taskNumber, equal) {
     if (!result[taskNumber] && answer.value !== "") {
         answer.readOnly = true;
         if (task[2] === equal) {
             result.push(true);
-            wrong.textContent = `Correct answer`;
+            info.textContent = `Correct answer`;
         } else {
             result.push(false);
-            wrong.textContent = `Wrong, correct answer ${task[2]}`;
+            info.textContent = `Wrong, correct answer ${task[2]}`;
         }
-    } else wrong.textContent = "Choose the correct one!";
+    } else info.textContent = "Choose the correct one!";
 }
 
 // показує стан відповідей
-function showState(number, result) {
+function showStateTask(number, result) {
     const trueAnswer = result.filter(e => e === true);
     let state = trueAnswer.length < 1 ? 0 : (trueAnswer.length / number) * 100;
     progress.textContent = `Total score ${state}% (${trueAnswer.length} correct answers out of ${number})`;
-    numTask.textContent = `task ${count + 1}`;
+    numTask.textContent = `task ${taskNumber + 1}`;
 
 }
 
 // показує завданя
-function showExample(task) {
-    example.textContent = `${task[0]} * ${task[1]} =`;
+function showOneExample(task) {
+    oneExample.textContent = `${task[0]} * ${task[1]} =`;
 }
 
 // виконання
-function action(number, answer) {
-    if (count < number) {
-        checkAnswer(tasks[count], result, count, parseInt(answer));
-        showState(number, result);
+function launch(number, answer) {
+    if (taskNumber < number) {
+        checkAnswerTask(tasks[taskNumber], result, taskNumber, parseInt(answer));
+        showStateTask(number, result);
     }
 }
 
 // наступне завдання
-function nextTask() {
+function nextExample() {
     if (answer.value !== "") {
-        wrong.textContent = "____________________________";
-        if (count < allTask - 1) {
-            count += 1;
+        action(allTask, answer.value)
+        info.textContent = "____________________________";
+        if (taskNumber < allTask - 1) {
+            taskNumber += 1;
             writeInfo();
             answer.readOnly = false;
         }
     } else {
-        wrong.textContent = "Choose the correct one!";
+        info.textContent = "Choose the correct one!";
     }
 }
 
 // оновлення інформації
 function writeInfo() {
-    showState(allTask, result);
-    showExample(tasks[count]);
+    showStateTask(taskCount, result);
+    showOneExample(tasks[taskNumber]);
     answer.value = "";
 }
 
-const allTask = 10;
-wrong.textContent = "____________________________";
-creatTask(allTask);
+const taskCount = 10;
+info.textContent = "____________________________";
+creatTasks(taskCount);
 writeInfo();
 check.addEventListener("click", () => {
-    action(allTask, answer.value)
+    launch(taskCount, answer.value)
 });
-nextButton.addEventListener('click', nextTask);
+nextButton.addEventListener('click', nextExample);
