@@ -85,7 +85,6 @@ function action(number, answer) {
 
 // наступне завдання
 function nextTask() {
-    console.log(answers[0].checked)
     if (answers[0].checked || answers[1].checked || answers[2].checked || answers[3].checked){
         wrong.textContent = "";
         if (count < allTask-1){
