@@ -34,3 +34,13 @@ section{
     filter: grayscale(0%);
     opacity: 1;
 }
+.form {
+    width: 300px;
+}
+.form fieldset {
+    margin: 10px;
+}
+
+.select-input{
+    background-color: darkcyan;
+}
