@@ -44,3 +44,19 @@ section{
 .select-input{
     background-color: darkcyan;
 }
+.block{
+    float: left;
+}
+
+.board{
+    position: relative;
+    margin: 10px;
+}
+.shape {
+    position: absolute;
+    left: 20px;
+    top: 100px;
+    text-align: center;
+    line-height: 200px;
+    background-color: darkcyan;
+}
