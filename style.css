@@ -64,3 +64,11 @@ section{
 .num{
     width: 40px;
 }
+
+.image{
+    width: 400px;
+}
+
+.big-size {
+    width: 800px;
+}
