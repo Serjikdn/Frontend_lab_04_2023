@@ -60,3 +60,7 @@ section{
     line-height: 200px;
     background-color: darkcyan;
 }
+
+.num{
+    width: 40px;
+}
