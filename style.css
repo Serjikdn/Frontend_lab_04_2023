@@ -72,3 +72,16 @@ section{
 .big-size {
     width: 800px;
 }
+.products{
+    margin: 0 auto;
+    width: 300px;
+}
+
+.products table, .products td{
+    border-collapse: collapse;
+}
+.products td{
+    border: 1px dashed limegreen;
+    padding: 5px;
+
+}
