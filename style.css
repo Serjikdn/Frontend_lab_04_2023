@@ -1,10 +1,11 @@
 body {
-    margin:  10px auto;
+    margin: 10px auto;
     width: 920px;
     background-color: black;
     color: #549f0c;
 }
-section{
+
+section {
     border: 1px solid #898888;
     margin: 5px;
     padding: 10px;
@@ -18,40 +19,45 @@ section{
     width: 450px;
 }
 
-.gallery{
+.gallery {
     width: 900px;
 }
 
-.gallery img{
+.gallery img {
     height: 130px;
 }
 
-.selected{
+.selected {
     filter: grayscale(100%);
     opacity: 0.5;
 }
-.not-selected{
+
+.not-selected {
     filter: grayscale(0%);
     opacity: 1;
 }
+
 .form {
     width: 300px;
 }
+
 .form fieldset {
     margin: 10px;
 }
 
-.select-input{
+.select-input {
     background-color: darkcyan;
 }
-.block{
+
+.block {
     float: left;
 }
 
-.board{
+.board {
     position: relative;
     margin: 10px;
 }
+
 .shape {
     position: absolute;
     left: 20px;
@@ -61,27 +67,80 @@ section{
     background-color: darkcyan;
 }
 
-.num{
+.num {
     width: 40px;
 }
 
-.image{
+.image {
     width: 400px;
 }
 
 .big-size {
     width: 800px;
 }
-.products{
+
+.products {
     margin: 0 auto;
     width: 300px;
 }
 
-.products table, .products td{
+.products table, .products td {
     border-collapse: collapse;
 }
-.products td{
+
+.products td {
     border: 1px dashed limegreen;
     padding: 5px;
 
 }
+
+/*task 10*/
+.slide {
+
+    position: relative;
+}
+
+#boardImage {
+    transition: all 0.5s ease-out;
+    opacity: 0;
+    width: 600px;
+}
+
+.button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: darkcyan;
+    position: absolute;
+    top: 150px;
+    border: 2px solid grey;
+}
+.button:active{
+    border: 1px solid darkcyan;
+}
+
+.button span {
+    display: block;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    border-top: 10px solid transparent; /* Задаємо ліву грань */
+    border-bottom: 10px solid transparent; /* Задаємо праву грань */
+
+}
+
+.previous span{
+    border-right: 15px solid #ffa; /* Задаємо нижню грань, змінюйте колір на потрібний */
+}
+
+.next span{
+    left: 12px;
+    border-left: 15px solid #ffa; /* Задаємо нижню грань, змінюйте колір на потрібний */
+}
+
+.next {
+    left: 565px;
+
+}
+
+
