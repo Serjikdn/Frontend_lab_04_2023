@@ -12,14 +12,17 @@ section {
     width: 580px;
 }
 
+/*task_1*/
 .language p {
     margin: 3px;
 }
 
+/*task_2*/
 #checkedList {
     width: 450px;
 }
 
+/*task_5*/
 .gallery {
     width: 900px;
 }
@@ -38,6 +41,7 @@ section {
     opacity: 1;
 }
 
+/*task_6*/
 .form {
     width: 300px;
 }
@@ -50,6 +54,7 @@ section {
     background-color: darkcyan;
 }
 
+/*task_7*/
 .block {
     float: left;
 }
