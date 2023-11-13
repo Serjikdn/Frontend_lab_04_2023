@@ -36,7 +36,7 @@ function checkAnswerTask(task, resultList, taskNumber, equal) {
 // показує стан відповідей
 function showStateTask(number, result) {
     const trueAnswer = result.filter(e => e === true);
-    let state = trueAnswer.length < 1 ? 0 : (trueAnswer.length / number) * 100;
+    const state = trueAnswer.length < 1 ? 0 : (trueAnswer.length / number) * 100;
     progress.textContent = `Total score ${state}% (${trueAnswer.length} correct answers out of ${number})`;
     numTask.textContent = `task ${taskNumber + 1}`;
 
@@ -49,18 +49,16 @@ function showOneExample(task) {
 
 // виконання
 function launch(number, answer) {
-    if (taskNumber < number) {
-        checkAnswerTask(tasks[taskNumber], result, taskNumber, parseInt(answer));
-        showStateTask(number, result);
-    }
+        checkAnswerTask(tasks[number], result, number, parseInt(answer));
+        showStateTask(taskCount, result);
 }
 
 // наступне завдання
 function nextExample() {
     if (answer.value !== "") {
-        action(allTask, answer.value)
+        launch(taskNumber, answer.value)
         info.textContent = "____________________________";
-        if (taskNumber < allTask - 1) {
+        if (taskNumber < taskCount - 1) {
             taskNumber += 1;
             writeInfo();
             answer.readOnly = false;
@@ -82,6 +80,6 @@ info.textContent = "____________________________";
 creatTasks(taskCount);
 writeInfo();
 check.addEventListener("click", () => {
-    launch(taskCount, answer.value)
+    launch(taskNumber, answer.value)
 });
 nextButton.addEventListener('click', nextExample);
