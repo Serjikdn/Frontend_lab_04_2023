@@ -1,0 +1,72 @@
+body {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.marquee-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #000;
+    color: #7fff00;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 40s linear infinite;
+    /*width: 600px;*/
+}
+
+@keyframes marquee {
+    0% { transform: translateX(200%); }
+    100% { transform: translateX(-100%); }
+}
+
+.black-theme {
+    background-color: black;
+    color: white;
+}
+main {
+    display: flex;
+}
+
+section {
+    border: 1px solid darkgray;
+    width: 50%;
+}
+
+.task {
+    display: block;
+    border-radius: 5px ;
+    border: 1px solid rgb(128, 128, 128);
+    border-left: 3px solid rgb(128, 128, 128);
+    border-top: 3px solid rgb(128, 128, 128);
+    padding: 10px;
+    margin: 10px;
+    background-color: darkseagreen;
+    color: black;
+    text-decoration: none;
+}
+
+.task:active {
+    border-left: 1px solid rgb(128, 128, 128);
+    border-top: 1px solid rgb(128, 128, 128);
+    border-right: 3px solid rgb(128, 128, 128);
+    border-bottom: 3px solid rgb(128, 128, 128);
+}
+
+.result {
+    width: 740px;
+    color: limegreen;
+    padding: 5px;
+    position: absolute;
+}
+
+iframe{
+    padding: 5px;
+    width: 612px;
+    height: 650px;
+}

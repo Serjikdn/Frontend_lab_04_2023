@@ -2,84 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Main</title>
+    <link rel="stylesheet" href="main-style.css">
 </head>
-<body>
-<h1>Lab 4</h1>
-<section>
-    <h2>Task 1</h2>
-    <div class="language">
-        <input type="checkbox" name="language" id="ua">
-        <label for="ua">Ukrainian</label><br>
-        <input type="checkbox" name="language" id="en">
-        <label for="en">English</label><br>
-        <input type="checkbox" name="language" id="sp">
-        <label for="sp">Spanish</label><br>
-        <p id="selectedLanguage"></p>
-        <button onclick="showLanguage()">OK</button>
+<body class="black-theme">
+<header>
+    <div class="marquee-container">
+        <div class="marquee-content" id="myLine"></div>
     </div>
-</section>
-<section>
-    <h2>Task 2</h2>
-    <div class="email">
-        <input type="checkbox" name="post@gmail.com" id="one">
-        <label for="one">post@gmail.com</label><br>
-        <input type="checkbox" name="store@gmail.com" id="two">
-        <label for="two">store@gmail.com</label><br>
-        <input type="checkbox" name="info@gmail.com" id="three">
-        <label for="three">info@gmail.com</label><br>
-        <input type="checkbox" name="feedback@gmail.com" id="four">
-        <label for="four">feedback@gmail.com</label><br>
-        <input type="checkbox" name="chat@gmail.com" id="five">
-        <label for="five">chat@gmail.com</label><br>
-        <input type="checkbox" name="weather@gmail.com" id="six">
-        <label for="six">weather@gmail.com</label><br>
-        <input type="checkbox" name="go@gmail.com" id="seven">
-        <label for="seven">go@gmail.com</label><br>
-        <input type="checkbox" name="refund@gmail.com" id="eight">
-        <label for="eight">refund@gmail.com</label><br>
-    </div>
-    <input type="text" id="checkedList">
-</section>
-<section>
-    <h2>Task 3</h2>
-    <div class="test">
-        <p>Choose the correct answer</p>
-        <p id="state">State</p>
-        <span></span>
-        <button id="next">next task</button>
-        <br>
-        <p id="example">example</p>
-        <input type="radio" name="answer" id="answer1">
-        <label for="answer1">1</label><br>
-        <input type="radio" name="answer" id="answer2">
-        <label for="answer2">2</label><br>
-        <input type="radio" name="answer" id="answer3">
-        <label for="answer3">3</label><br>
-        <input type="radio" name="answer" id="answer4">
-        <label for="answer4">4</label>
-        <p id="wrong"></p>
-    </div>
-</section>
-<section>
-    <h2>Task 4</h2>
-    <div class="test_2">
-        <div id="progress">x</div>
-        <p><span id="numTask"></span><button id="nextTask">next task</button></p>
-        <div>
-            <span id="task">4+4 =</span>
-            <input type="text" name="text">
-            <button id="check">check</button>
-        </div>
-        <p id="info"></p>
-    </div>
-</section>
+</header>
 
-<!--<script src="task_1.js"></script>-->
-<!--<script src="task_2.js"></script>-->
-<!--<script src="task_3.js"></script>-->
-<!--<script src="task_4.js"></script>-->
-<script src="task_5.js"></script>
+<main>
+    <section>
+        <div><a href="#" class="task" id="task_1">1. Користувач вводить суму грошей у гаманці та ціну одного бургера.
+            Програма
+            виводить, скільки бургерів може купити користувач і скільки здачі в нього залишиться.
+        </a></div>
+        <div><a href="#" class="task" id="task_2">2. Запитайте у користувача число і перемістіть останню цифру на початок
+            (наприклад, з числа 12345 має вийти число 51234).</a></div>
+        <div><a href="#" class="task" id="task_3">3. Запитати дату (день, місяць, рік) та вивести попередню та наступну за нею дату.
+            Врахуйте можливість переходу на наступний/попередній місяць, рік та високосний рік. Високосний рік або
+            кратний 400, або кратний 4 і при цьому не кратний 100.</a></div>
+        <div><a href="#" class="task" id="task_4">4. Дано ціле число у діапазоні 1-69, що визначає вік (у роках). Вивести рядок-опис
+            зазначеного віку, забезпечивши правильне узгодження числа зі словом «рік», наприклад: 20 – «двадцять років»,
+            32 – «тридцять два роки», 41 – «сорок один рік».</a></div>
+        <div><a href="#" class="task" id="task_5">5. Створіть програму, яка малює простий візерунок - зірку і виводить його в
+            консоль.</a></div>
+        <div><a href="#" class="task" id="task_6">6. Користувач вводить числа з клавіатури. Знайти суму введених чисел. Введення чисел
+            закінчується тоді, коли буде введено 0. Вивести суму у такому вигляді:
+            2 + 7 + 10 + 6 + 0 = 25
+        </a></div>
+        <div><a href="#" class="task" id="task_7">7. Ввести число A, цифру S-ступінь числа і N-номер цифри числа .
+            Звести до ступеня
+            S N-ну цифру заданого числа А.</a></div>
+        <div><a href="#" class="task" id="task_8">7. Ввести число A, цифру S-ступінь числа і N-номер цифри числа .
+            Звести до ступеня
+            S N-ну цифру заданого числа А.</a></div>
+        <div><a href="#" class="task" id="task_9">7. Ввести число A, цифру S-ступінь числа і N-номер цифри числа .
+            Звести до ступеня
+            S N-ну цифру заданого числа А.</a></div>
+        <div><a href="#" class="task" id="task_10">7. Ввести число A, цифру S-ступінь числа і N-номер цифри числа .
+            Звести до ступеня
+            S N-ну цифру заданого числа А.</a></div>
+    </section>
+    <section>
+        <div class="result">
+            <iframe src="task_1.html"></iframe>
+        </div>
+    </section>
+</main>
+<script src="main.js"></script>
 </body>
 </html>
