@@ -39,7 +39,6 @@ function showStateTask(number, result) {
     const state = trueAnswer.length < 1 ? 0 : (trueAnswer.length / number) * 100;
     progress.textContent = `Total score ${state}% (${trueAnswer.length} correct answers out of ${number})`;
     numTask.textContent = `task ${taskNumber + 1}`;
-
 }
 
 // показує завданя
